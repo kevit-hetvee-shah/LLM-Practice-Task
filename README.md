@@ -1,4 +1,43 @@
+## Project Setup
+
+### Virtual Environment Installation, Creation, and Activation
+```python
+# Installation
+pip install virtualenv
+
+# Creation
+virtualenv <env_name>
+
+# Activation
+source <path_to_venv>/bin/activate
+```
+
+### Requirement Installation
+```python
+pip install -r requirements.txt
+```
+<br>
+
+## Run Project
+```python
+uvicorn main:app
+```
+**NOTE** : Use flag ```--reload``` to run in DEBUG Mode.
+
+<br>
+
+## Considerations
+
+- All the API calls are SYNC (Can be made ASYNC if required.)
+- The data is loaded in the Chroma Vector Database while loading them for the first time. So for every API call, it will only load the data from Database, and store the data everytime.
+- Few of the YouTube Videos are not supporting transcription. So skipping those videos.
+
+<br>
+
+## TASK
+
 **Question 1:** You need to develop an application that includes APIs to accomplish the following tasks:
+
 Scrape the content of
 this [PDF](https://adminkevit-my.sharepoint.com/personal/darshit_mehta_botprosolutions_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fdarshit%5Fmehta%5Fbotprosolutions%5Fcom%2FDocuments%2Fgenerative%20AI%2FKevit%2FKevit%20Employee%20Handbook%2Epdf&parent=%2Fpersonal%2Fdarshit%5Fmehta%5Fbotprosolutions%5Fcom%2FDocuments%2Fgenerative%20AI%2FKevit&ga=1)
 and crawl the website [kevit.io](https://kevit.io/) using an API.
