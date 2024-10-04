@@ -1,13 +1,15 @@
+import os
+
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain_chroma import Chroma
 from langchain_community.document_loaders import YoutubeLoader
 import requests
 from src.constants import RECIPE_PROMPT, FORM_DATA, REQUEST_HEADERS, CHEFS_RECIPE_URL, CONTENT_FETCHING_EXCEPTION, \
-    ERROR_RESPONSE_MESSAGE, RECIPE_DB_PATH, LANGUAGE_TRANSCRIPTION_ERROR
+    ERROR_RESPONSE_MESSAGE, LANGUAGE_TRANSCRIPTION_ERROR
 from bs4 import BeautifulSoup
 from langchain_core.prompts import ChatPromptTemplate
-
+RECIPE_DB_PATH=os.path.dirname(os.path.realpath(__file__))
 from src.common import llm, embeddings
 
 

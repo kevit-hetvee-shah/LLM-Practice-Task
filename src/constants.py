@@ -50,13 +50,9 @@ REQUEST_HEADERS = {
 
 CHEFS_RECIPE_URL = "https://ranveerbrar.com/wp-content/themes/ranveer-brar/recipe-ajax.php/"
 
-RECIPE_DB_PATH = "/home/kevit/PycharmProjects/prac_proj/src/question_2"
-
-KEVIT_DATA_DB_PATH = "/home/kevit/PycharmProjects/prac_proj/src/question_1"
-
 KEVIT_WEBSITE = "https://kevit.io/"
 
-PDF_PATH = "/home/kevit/PycharmProjects/prac_proj/src/KevitEmployeeHandbook.pdf"
+HANDBOOK_FILE_NAME = "src/KevitEmployeeHandbook.pdf"
 
 INVALID_LINKS = ["https://kevit.io", "https://kevit.io/", "javascript:void(0);" "#"]
 

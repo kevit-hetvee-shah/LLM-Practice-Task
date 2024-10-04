@@ -1,8 +1,10 @@
-from src.constants import PDF_PATH, SUCCESS_RESPONSE_MESSAGE, ERROR_RESPONSE_MESSAGE, LINK_REFERENCE_IN_RESPONSE, \
-    KEVIT_WEBSITE, KEVIT_DONT_KNOW_MESSAGE_CHECK, UNABLE_TO_FETCH_DATA_RESPONSE_MESSAGE
+from src.constants import SUCCESS_RESPONSE_MESSAGE, ERROR_RESPONSE_MESSAGE, LINK_REFERENCE_IN_RESPONSE, \
+    KEVIT_WEBSITE, KEVIT_DONT_KNOW_MESSAGE_CHECK, UNABLE_TO_FETCH_DATA_RESPONSE_MESSAGE, HANDBOOK_FILE_NAME
 from src.question_1.rag import generate_results
 from src.question_1.utils import crawl_website, load_pdf
 from fastapi import APIRouter
+import os
+PDF_PATH = os.path.join(os.getcwd(), HANDBOOK_FILE_NAME)
 
 scrape_data_router = APIRouter(prefix="/data", tags=["Kevit"])
 

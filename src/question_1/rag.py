@@ -4,11 +4,13 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from src.constants import ASSISTANT_PROMPT, KEVIT_WEBSITE, KEVIT_DATA_DB_PATH, PDF_PATH
+from src.constants import ASSISTANT_PROMPT, KEVIT_WEBSITE, HANDBOOK_FILE_NAME
 from src.question_1.utils import load_pdf, crawl_website
 from src.common import llm, embeddings
+import os
 load_dotenv()
-
+PDF_PATH = os.path.join(os.getcwd(), HANDBOOK_FILE_NAME)
+KEVIT_DATA_DB_PATH=os.path.dirname(os.path.realpath(__file__))
 system_prompt_template = ASSISTANT_PROMPT
 
 
